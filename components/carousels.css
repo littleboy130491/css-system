@@ -1,0 +1,97 @@
+.carousel {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.carousel__viewport {
+  overflow: clip;
+  border: var(--border-width) solid var(--color-line);
+  border-radius: var(--radius-2xl);
+  background: var(--gradient-surface);
+  box-shadow: var(--shadow-md);
+}
+
+.carousel__track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(100%, 1fr);
+  gap: var(--space-4);
+  padding: var(--space-4);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel__slide {
+  position: relative;
+  min-width: 0;
+  padding: var(--space-6);
+  border: var(--border-width) solid var(--color-line);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  scroll-snap-align: start;
+}
+
+.carousel__slide > * + * {
+  margin-top: var(--space-4);
+}
+
+.carousel__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.carousel__buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.carousel__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: var(--border-width) solid var(--color-line);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.carousel__button:hover {
+  transform: translateY(-1px);
+  border-color: var(--color-line-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.carousel__pagination {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.carousel__dot {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background: var(--color-line-strong);
+}
+
+.carousel__dot.is-active,
+.carousel__dot[aria-current="true"] {
+  background: var(--color-primary);
+}
