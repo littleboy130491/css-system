@@ -1,6 +1,9 @@
 
 /* By default div width is 100% */
-
+header {
+  background: blue;
+  padding-block:  var(--space-sm);
+}
 section {
   width: 100%;
   margin: 0;
@@ -22,10 +25,15 @@ section {
 }
 
 /* Flex Columns, put this class on div */
-.flex-grid {
+.flex {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.col {
+  flex: 1;
+  min-width: 0;
 }
 
 .flex-grid > * {
