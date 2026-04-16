@@ -16,3 +16,5 @@ p, a, li, caption {
   text-transform: uppercase;
   color: var(--color-accent);
 }
+
+/* Add for table, accordion, tab, tooltip */
