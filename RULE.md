@@ -27,9 +27,9 @@ This system is a plain CSS design system split into small files by responsibilit
 7. Keep tokens in `tokens.css` only.
 8. Keep resets and semantic HTML defaults in `base.css`.
 9. Keep text rhythm and type-related classes in `typography.css`.
-10. Keep page and section layout primitives in `layout.css`.
+10. Keep page, spacing, sizing, and section layout primitives in `layout.css`.
 11. Keep reusable UI patterns in `components/`.
-12. Keep small helper classes in `utility.css`.
+12. Keep small behavioral or presentation helpers in `utility.css`.
 
 ## Naming Convention
 
@@ -39,7 +39,7 @@ The system uses a practical BEM-style naming approach.
 - Element: `.tabs__list`, `.tabs__tab`, `.tabs__panel`
 - Variant or alternate block style: `.button-secondary`, `.button-ghost`
 - State helper: `.is-active`, `.is-open`
-- Utility: `.u-center`, `.u-gap-4`
+- Utility: `.u-center`, `.u-flex`
 - Text helper: `.text-muted`, `.text-soft`
 
 Use `__` when an item is a structural part of a component block.
@@ -52,7 +52,7 @@ Examples:
 
 Use `-` for:
 
-- utility-like readable names: `.nav-link`
+- utility-like readable names inside a broader block
 - alternate styles: `.button-secondary`
 - existing project naming patterns
 
@@ -66,6 +66,7 @@ Use `-` for:
 6. Avoid styling by tag inside component files unless there is a strong reason.
 7. Keep components portable. A component should not depend on page-specific wrappers to look correct.
 8. Use responsive behavior inside the same file as the component or primitive it belongs to.
+9. Keep spacing and sizing primitives in `layout.css`, not `utility.css`.
 
 ## Component Rules
 
@@ -80,6 +81,7 @@ When adding a new component:
 
 Examples:
 
+- `components/navigations.css`
 - `components/tabs.css`
 - `components/accordions.css`
 - `components/carousels.css`
@@ -91,7 +93,7 @@ Examples:
 3. Prefer composition over one-off custom classes.
 4. Use layout primitives for page structure.
 5. Use component classes for reusable UI patterns.
-6. Use utility classes only for small local adjustments.
+6. Use utility classes only for small behavioral or presentation adjustments.
 
 Read [HTML-USAGE.md](./HTML-USAGE.md) for markup guidance and examples.
 

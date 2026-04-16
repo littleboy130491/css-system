@@ -3,232 +3,115 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CSS System Boilerplate</title>
+    <title>Project Header Boilerplate</title>
     <meta
       name="description"
-      content="Boilerplate page for the local CSS design system.">
-    <link rel="stylesheet" href="./system.css">
+      content="Header boilerplate using the local CSS design system.">
+    <link rel="stylesheet" href="./styles/system.css">
   </head>
   <body>
-    <header class="section-tight">
+    <a class="skip-link" href="#main">Skip to content</a>
+    
+       <header id="site-header" class="section-tight">
       <div class="container-lg">
-        <nav class="nav">
-          <a class="eyebrow" href="#top">Northstar UI</a>
-          <div class="nav-links">
-            <a class="nav-link" href="#features">Features</a>
-            <a class="nav-link" href="#components">Components</a>
-            <a class="nav-link" href="#pricing">Pricing</a>
-            <a class="button-secondary" href="#contact">Contact</a>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a class="eyebrow" href="#site-header">Project Starter</a>
+
+          <div id="primary-nav-links" class="primary-nav__links">
+            <a class="primary-nav__link" href="#overview">Overview</a>
+            <a class="primary-nav__link" href="#projects">Projects</a>
+            <a class="primary-nav__link" href="#contact">Contact</a>
+            <a class="button-secondary" href="#contact">Start Here</a>
           </div>
         </nav>
       </div>
     </header>
+   
 
-    <main id="top">
-      <section class="section">
-        <div class="container-lg">
-          <div class="hero hero--split">
-            <div class="hero__content">
-              <span class="eyebrow">Design System Boilerplate</span>
-              <h1 class="hero__title">Ship a complete interface foundation with plain CSS.</h1>
-              <p class="hero__lead">
-                This starter page uses the generated tokens, layout primitives, utilities,
-                cards, buttons, and form controls from the local design system.
-              </p>
-              <div class="hero__actions">
-                <a class="button" href="#components">Explore Components</a>
-                <a class="button-ghost" href="#pricing">See Pricing</a>
-              </div>
-              <div class="hero__meta">
-                <span>Responsive layout</span>
-                <span>Semantic tokens</span>
-                <span>Light and dark support</span>
-              </div>
-            </div>
-
-            <div class="hero__visual">
-              <div class="hero__card hero__card--offset">
-                <div class="stack">
-                  <span class="badge">Live Preview</span>
-                  <h3>Production-ready visual language</h3>
-                  <p class="text-muted">
-                    Reusable sections and component classes without needing a framework.
-                  </p>
-                </div>
-              </div>
-
-              <div class="hero__stats">
-                <div class="hero__stat">
-                  <span class="hero__stat-value">32</span>
-                  <span class="hero__stat-label">Tokens</span>
-                </div>
-                <div class="hero__stat">
-                  <span class="hero__stat-value">12</span>
-                  <span class="hero__stat-label">Patterns</span>
-                </div>
-                <div class="hero__stat">
-                  <span class="hero__stat-value">100%</span>
-                  <span class="hero__stat-label">CSS</span>
-                </div>
-              </div>
-            </div>
-          </div>
+    <main id="main">
+      <section id="hero" class="hero-main">
+        <div class="container content-box center">
+          <p>Hero Main</p>
+          <h1>Title</h1>
+          <p>Description</p>
+          <a href="#" class="button">Click here</a>
         </div>
       </section>
-
-      <section class="section-tight" id="features">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">Core Features</span>
-            <h2>Built for fast composition.</h2>
-            <p class="lead">
-              The system separates tokens, base styles, typography, layout, components,
-              and utilities while keeping usage simple in HTML.
-            </p>
-          </div>
-
-          <div class="card-grid">
-            <article class="card card--interactive">
-              <div class="card__body">
-                <span class="card__eyebrow">Tokens</span>
-                <h3 class="card__title">Semantic color, spacing, type, radius, and elevation variables.</h3>
-                <p class="text-muted">Use consistent CSS custom properties throughout every component.</p>
-              </div>
-            </article>
-
-            <article class="card card--interactive">
-              <div class="card__body">
-                <span class="card__eyebrow">Layout</span>
-                <h3 class="card__title">Containers, sections, grids, clusters, stacks, and split layouts.</h3>
-                <p class="text-muted">Compose pages without writing custom layout rules every time.</p>
-              </div>
-            </article>
-
-            <article class="card card--interactive">
-              <div class="card__body">
-                <span class="card__eyebrow">Components</span>
-                <h3 class="card__title">Buttons, badges, inputs, panels, cards, and hero structures.</h3>
-                <p class="text-muted">Start from reusable patterns and refine only where needed.</p>
-              </div>
-            </article>
-          </div>
+       <section id="two-columns">
+        <div class="container flex-grid cols-2">
+       <div>
+           <p>Hero Main</p>
+          <h1>Col 1</h1>
+          <p>Description</p>
+          <a href="#" class="button">Click here</a>
+       </div>
+         <div>
+           <p>Hero Main</p>
+          <h1>Col 2</h1>
+          <p>Description</p>
+          <a href="#" class="button">Click here</a>
+       </div>
         </div>
       </section>
-
-      <section class="section" id="components">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">Components</span>
-            <h2>Reference building blocks.</h2>
-          </div>
-
-          <div class="grid-3">
-            <article class="stat-card">
-              <span class="stat-card__label">Monthly Growth</span>
-              <strong class="stat-card__value">+18.4%</strong>
-              <p class="text-muted">Design velocity improved after standardizing primitives.</p>
-            </article>
-
-            <article class="metric-card">
-              <span class="metric-card__trend" data-tone="positive">Healthy</span>
-              <h3>Component coverage</h3>
-              <p class="lead">87%</p>
-              <p class="text-muted">Most landing page and dashboard patterns are already covered.</p>
-            </article>
-
-            <article class="testimonial-card">
-              <p class="testimonial-card__quote">
-                “This boilerplate gave us a clean starting point without introducing framework lock-in.”
-              </p>
-              <div class="testimonial-card__author">
-                <span class="chip">Frontend Team</span>
-                <span>Internal review</span>
-              </div>
-            </article>
-          </div>
+        <section id="three-columns">
+        <div class="container flex-grid cols-3">
+       <div>
+           <p>Hero Main</p>
+          <h1>Col 1</h1>
+          <p>Description</p>
+          <a href="#" class="button">Click here</a>
+       </div>
+         <div>
+           <p>Hero Main</p>
+          <h1>Col 2</h1>
+          <p>Description</p>
+          <a href="#" class="button">Click here</a>
+       </div>
+        <div>
+           <p>Hero Main</p>
+          <h1>Col 3</h1>
+          <p>Description</p>
+          <a href="#" class="button">Click here</a>
+       </div>
         </div>
       </section>
-
-      <section class="section-tight" id="pricing">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">Pricing</span>
-            <h2>Example pricing cards.</h2>
-          </div>
-
-          <div class="grid-2">
-            <article class="pricing-card">
-              <span class="badge">Starter</span>
-              <h3>For simple product sites</h3>
-              <div class="pricing-card__price">
-                <span>$0</span>
-                <span class="pricing-card__period">per project</span>
-              </div>
-              <p class="text-muted">Use the foundation classes and extend from there.</p>
-              <a class="button" href="#contact">Get Started</a>
-            </article>
-
-            <article class="pricing-card">
-              <span class="badge">Pro</span>
-              <h3>For heavier interface work</h3>
-              <div class="pricing-card__price">
-                <span>$24</span>
-                <span class="pricing-card__period">per month</span>
-              </div>
-              <p class="text-muted">Add advanced patterns, documentation, and team workflows.</p>
-              <a class="button-secondary" href="#contact">Talk to Sales</a>
-            </article>
-          </div>
+       <section id="four-columns">
+        <div class="container flex-grid cols-4">
+       <div>
+           <p>Hero Main</p>
+          <h1>Col 1</h1>
+          <p>Description</p>
+          <a href="#" class="button">Click here</a>
+       </div>
+         <div>
+           <p>Hero Main</p>
+          <h1>Col 2</h1>
+          <p>Description</p>
+          <a href="#" class="button">Click here</a>
+       </div>
+           <div>
+           <p>Hero Main</p>
+          <h1>Col 3</h1>
+          <p>Description</p>
+          <a href="#" class="button">Click here</a>
+       </div>
+           <div>
+           <p>Hero Main</p>
+          <h1>Col 4</h1>
+          <p>Description</p>
+          <a href="#" class="button">Click here</a>
+       </div>
         </div>
       </section>
-
-      <section class="section" id="contact">
+      <section>
         <div class="container">
-          <div class="split">
-            <div class="stack">
-              <span class="eyebrow">Contact</span>
-              <h2>Example form layout.</h2>
-              <p class="lead">
-                The inputs, textarea, field labels, and panel styles are all using the
-                generated CSS system directly.
-              </p>
-            </div>
-
-            <form class="panel" action="#" method="post">
-              <div class="panel-body stack">
-                <div class="form-row">
-                  <label class="field">
-                    <span class="field-label">First name</span>
-                    <input class="input" type="text" name="first-name" placeholder="Alex">
-                  </label>
-
-                  <label class="field">
-                    <span class="field-label">Email</span>
-                    <input class="input" type="email" name="email" placeholder="alex@example.com">
-                  </label>
-                </div>
-
-                <label class="field">
-                  <span class="field-label">Project type</span>
-                  <select class="select" name="project-type">
-                    <option>Marketing site</option>
-                    <option>Dashboard</option>
-                    <option>Design system</option>
-                  </select>
-                </label>
-
-                <label class="field">
-                  <span class="field-label">Message</span>
-                  <textarea class="textarea" name="message" placeholder="Tell us what you are building."></textarea>
-                </label>
-
-                <div class="cluster">
-                  <button class="button" type="submit">Send Message</button>
-                  <span class="field-hint">Boilerplate markup only. No backend attached.</span>
-                </div>
-              </div>
-            </form>
-          </div>
+<h2>Section biasa</h2>
+        </div>
+        
+      </section>
+      <section>
+        <div class="containerbox">
+          <h2>TEST</h2>
         </div>
       </section>
     </main>

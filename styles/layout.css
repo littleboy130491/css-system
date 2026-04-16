@@ -1,0 +1,60 @@
+
+/* By default div width is 100% */
+
+section {
+  width: 100%;
+  margin: 0;
+}
+
+
+.container {
+  width: var(--container-width);
+  margin-inline: auto;
+}
+
+.content-box {
+  padding-block: var(--space-lg);
+}
+
+/* Content Box Flow, put this class on div */
+.content-box {
+  padding-block: var(--space-lg);
+}
+
+/* Flex Columns, put this class on div */
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.flex-grid > * {
+  min-width: 0;
+  width: 100%;
+}
+
+@media (min-width: 40rem) {
+  .cols-2 > *,
+  .cols-3 > *,
+  .cols-4 > * {
+    width: calc((100% - 1rem) / 2);
+  }
+}
+
+@media (min-width: 48rem) {
+  .cols-3 > *,
+  .cols-4 > * {
+    width: calc((100% - 2rem) / 3);
+  }
+}
+
+@media (min-width: 64rem) {
+  .cols-4 > * {
+    width: calc((100% - 3rem) / 4);
+  }
+}
+
+/* Horizontal Alignments */
+.center {
+  text-align: center;
+}

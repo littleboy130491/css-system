@@ -1,0 +1,54 @@
+:root {
+  color-scheme: light;
+
+  --space-xl: 20rem;
+  --space-lg: 10rem;
+  --space-md: 5rem;
+
+    --content-width: 720px;
+  --container-width: 1200px;
+  --wide-width: 1400px;
+
+  --color-bg: #f5f2ea;
+  --color-surface: #fffdf8;
+  --color-text: #221f1a;
+  --color-text-muted: #6b645a;
+  --color-line: rgba(34, 31, 26, 0.12);
+  --color-accent: #bc5f3d;
+  --color-accent-strong: #9d4626;
+  --color-accent-soft: rgba(188, 95, 61, 0.12);
+  --color-white: #ffffff;
+
+  --font-sans: "Inter", "Segoe UI", Arial, sans-serif;
+
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-4xl: clamp(2.5rem, 1.8rem + 3vw, 4.75rem);
+
+  --leading-tight: 1.05;
+  --leading-normal: 1.6;
+
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  
+
+  --radius-md: 1rem;
+  --radius-pill: 999px;
+
+  --shadow-md: 0 18px 40px rgba(34, 31, 26, 0.08);
+
+  --container-xl: 78rem;
+  --transition-fast: 160ms ease;
+}

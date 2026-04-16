@@ -18,6 +18,7 @@ css-system/
 ├── utility.css
 └── components/
     ├── components.css
+    ├── navigations.css
     ├── cards.css
     ├── hero.css
     ├── tabs.css
@@ -46,11 +47,11 @@ css-system/
 
 - `layout.css`
   Layout primitives.
-  Examples: `.container`, `.section`, `.grid-3`, `.split`, `.cluster`, `.stack`.
+  Examples: `.container`, `.section`, `.grid-3`, `.split`, `.cluster`, `.stack`, `.p-6`, `.mt-8`, `.w-full`, `.min-h-screen`.
 
 - `utility.css`
   Small helper utilities.
-  Examples: `.u-center`, `.u-gap-4`, `.u-p-6`.
+  Examples: `.u-center`, `.u-flex`, `.u-surface`, `.u-muted`.
 
 - `index.html`
   Boilerplate demonstration page for the design system.
@@ -61,7 +62,11 @@ Use `components/` for reusable UI patterns.
 
 - `components.css`
   Shared common components and small UI building blocks.
-  Examples: buttons, inputs, panels, nav, breadcrumbs.
+  Examples: buttons, inputs, panels.
+
+- `navigations.css`
+  Navigation-related UI patterns.
+  Examples: primary navigation, breadcrumbs.
 
 - `cards.css`
   Card families and card-based patterns.

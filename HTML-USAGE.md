@@ -27,8 +27,9 @@ Build pages in this order:
 
 1. Use semantic HTML.
 2. Add layout primitives for structure.
-3. Add component classes for UI patterns.
-4. Add utilities only for small adjustments.
+3. Add spacing and sizing primitives from `layout.css` when needed.
+4. Add component classes for UI patterns.
+5. Add utilities only for small behavioral or presentation adjustments.
 
 ## ID Recommendation
 
@@ -108,12 +109,12 @@ Examples:
 ```html
 <header class="section-tight">
   <div class="container-lg">
-    <nav class="nav">
+    <nav class="primary-nav">
       <a class="eyebrow" href="/">Brand</a>
 
-      <div class="nav-links">
-        <a class="nav-link" href="/features">Features</a>
-        <a class="nav-link" href="/pricing">Pricing</a>
+      <div id="primary-nav-links" class="primary-nav__links">
+        <a class="primary-nav__link" href="/features">Features</a>
+        <a class="primary-nav__link" href="/pricing">Pricing</a>
         <a class="button-secondary" href="/contact">Contact</a>
       </div>
     </nav>
@@ -240,9 +241,9 @@ Examples:
 - Use `system.css` only. Do not link individual CSS files in HTML.
 - Prefer existing classes before creating new ones.
 - Prefer stable IDs for major sections and for wrappers that group essential content blocks.
-- Use `.container`, `.section`, `.grid-*`, `.stack`, and `.cluster` for structure.
+- Use `.container`, `.section`, `.grid-*`, `.stack`, `.cluster`, and spacing or sizing primitives from `layout.css` for structure.
 - Use component classes for reusable UI.
-- Use utilities for small one-off adjustments, not as the main styling strategy.
+- Use utilities for small behavioral or presentation adjustments, not for spacing or sizing.
 - Keep HTML semantic even when adding many classes.
 
 ## Reference
