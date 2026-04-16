@@ -1,8 +1,8 @@
 
 /* By default div width is 100% */
 header {
-  background: blue;
-  padding-block:  var(--space-sm);
+  background: var(--color-surface);
+  padding-block: var(--space-sm);
 }
 section {
   width: 100%;
@@ -28,7 +28,7 @@ section {
 .flex {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: var(--grid-gap);
 }
 
 .col {
@@ -45,20 +45,20 @@ section {
   .cols-2 > *,
   .cols-3 > *,
   .cols-4 > * {
-    width: calc((100% - 1rem) / 2);
+    width: calc((100% - var(--grid-gap)) / 2);
   }
 }
 
 @media (min-width: 48rem) {
   .cols-3 > *,
   .cols-4 > * {
-    width: calc((100% - 2rem) / 3);
+    width: calc((100% - var(--grid-gap) - var(--grid-gap)) / 3);
   }
 }
 
 @media (min-width: 64rem) {
   .cols-4 > * {
-    width: calc((100% - 3rem) / 4);
+    width: calc((100% - var(--grid-gap) - var(--grid-gap) - var(--grid-gap)) / 4);
   }
 }
 

@@ -1,55 +1,98 @@
 :root {
   color-scheme: light;
 
-  --space-xl: 20rem;
-  --space-lg: 10rem;
-  --space-md: 5rem;
-  --space-sm: 2rem;
-
-  --content-width: 720px;
-  --container-width: 1200px;
-  --wide-width: 1400px;
-
-  --color-bg: #f5f2ea;
-  --color-surface: #fffdf8;
-  --color-text: #221f1a;
-  --color-text-muted: #6b645a;
-  --color-line: rgba(34, 31, 26, 0.12);
-  --color-accent: #bc5f3d;
-  --color-accent-strong: #9d4626;
-  --color-accent-soft: rgba(188, 95, 61, 0.12);
-  --color-white: #ffffff;
-
+  /* Typography: font family, scale, rhythm, and tracking used for headings, body copy, and labels. */
   --font-sans: "Inter", "Segoe UI", Arial, sans-serif;
 
+  --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: clamp(1.875rem, 1.5rem + 1.5vw, 3rem);
   --text-4xl: clamp(2.5rem, 1.8rem + 3vw, 4.75rem);
 
   --leading-tight: 1.05;
+  --leading-snug: 1.25;
   --leading-normal: 1.6;
+  --leading-relaxed: 1.75;
+
+  --tracking-tight: -0.04em;
+  --tracking-wide: 0.16em;
 
   --weight-medium: 500;
   --weight-semibold: 600;
   --weight-bold: 700;
 
+  /* Color: surface, text, border, and interaction colors used across base UI states. */
+  --color-bg: #f5f2ea;
+  --color-surface: #fffdf8;
+  --color-text: #221f1a;
+  --color-text-muted: #6b645a;
+  --color-line: rgba(34, 31, 26, 0.12);
+  --color-border: var(--color-line);
+  --color-border-strong: rgba(34, 31, 26, 0.24);
+  --color-accent: #bc5f3d;
+  --color-accent-strong: #9d4626;
+  --color-accent-soft: rgba(188, 95, 61, 0.12);
+  --color-focus: var(--color-accent);
+  --color-link: var(--color-accent);
+  --color-link-hover: var(--color-accent-strong);
+  --color-white: #ffffff;
+
+  /* Spacing and layout: compact numeric scale plus semantic section, grid, and container tokens. */
+  --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
   --space-4: 1rem;
+  --space-5: 1.25rem;
   --space-6: 1.5rem;
   --space-8: 2rem;
   --space-10: 2.5rem;
   --space-12: 3rem;
+  --space-14: 3.5rem;
   --space-16: 4rem;
   --space-20: 5rem;
-  
 
+  /* Semantic spacing aliases for major sections and vertical rhythm. */
+  --space-xs: 1rem;
+  --space-sm: 2rem;
+  --space-md: 5rem;
+  --space-lg: 10rem;
+  --space-xl: 20rem;
+
+  /* Shared layout and control sizing primitives. */
+  --grid-gap: var(--space-4);
+  --button-min-height: 3rem;
+  --button-padding-y: 0.875rem;
+  --button-padding-x: 1.4rem;
+
+  --content-width: 720px;
+  --container-width: 1200px;
+  --wide-width: 1400px;
+  --container-xl: 78rem;
+
+  /* Border and shadow: radius, stroke, depth, and focus-ring primitives for reusable components. */
+  --border-width-sm: 1px;
+  --border-width-md: 2px;
+  --radius-sm: 0.5rem;
   --radius-md: 1rem;
+  --radius-lg: 1.5rem;
   --radius-pill: 999px;
 
+  --shadow-sm: 0 10px 24px rgba(34, 31, 26, 0.06);
   --shadow-md: 0 18px 40px rgba(34, 31, 26, 0.08);
+  --shadow-lg: 0 24px 56px rgba(34, 31, 26, 0.12);
 
-  --container-xl: 78rem;
-  --transition-fast: 160ms ease;
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+
+  /* Transition and motion: durations, easing curves, and movement distance for interactive feedback. */
+  --ease-standard: ease;
+  --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --transition-fast: 160ms var(--ease-standard);
+  --transition-base: 240ms var(--ease-standard);
+  --transition-slow: 320ms var(--ease-emphasized);
+  --motion-lift-sm: -1px;
 }
