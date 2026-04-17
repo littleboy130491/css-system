@@ -3,6 +3,7 @@
 
   /* Typography: font family, scale, rhythm, and tracking used for headings, body copy, and labels. */
   --font-sans: "Inter", "Segoe UI", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;

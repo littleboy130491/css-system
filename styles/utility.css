@@ -1,0 +1,48 @@
+/* Text alignment */
+.u-center {
+  text-align: center;
+}
+
+.u-left {
+  text-align: left;
+}
+
+.u-right {
+  text-align: right;
+}
+
+/* Display */
+.u-flex {
+  display: flex;
+}
+
+.u-block {
+  display: block;
+}
+
+.u-hidden {
+  display: none;
+}
+
+/* Surface */
+.u-surface {
+  background: var(--color-surface);
+}
+
+/* Text color */
+.u-muted {
+  color: var(--color-text-muted);
+}
+
+/* Visually hidden (accessible label) */
+.u-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

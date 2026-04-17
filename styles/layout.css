@@ -1,30 +1,63 @@
-
-/* By default div width is 100% */
+/* Section defaults */
 header {
   background: var(--color-surface);
   padding-block: var(--space-sm);
 }
+
 section {
   width: 100%;
-  margin: 0;
+  padding-block: var(--space-md);
 }
 
+.section {
+  padding-block: var(--space-md);
+}
 
+.section-tight {
+  padding-block: var(--space-sm);
+}
+
+/* Containers */
 .container {
-  width: var(--container-width);
+  width: min(var(--container-width), calc(100% - var(--space-8)));
   margin-inline: auto;
 }
 
+.container-lg {
+  width: min(var(--wide-width), calc(100% - var(--space-8)));
+  margin-inline: auto;
+}
+
+/* Content box: wrapper with generous vertical padding */
 .content-box {
   padding-block: var(--space-lg);
 }
 
-/* Content Box Flow, put this class on div */
-.content-box {
-  padding-block: var(--space-lg);
+/* Section heading: vertical cluster sitting above section content */
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+  max-width: var(--content-width);
 }
 
-/* Flex Columns, put this class on div */
+/* Stack: vertical rhythm */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Cluster: horizontal group that wraps */
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+/* Flex columns */
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -52,17 +85,42 @@ section {
 @media (min-width: 48rem) {
   .cols-3 > *,
   .cols-4 > * {
-    width: calc((100% - var(--grid-gap) - var(--grid-gap)) / 3);
+    width: calc((100% - var(--grid-gap) * 2) / 3);
   }
 }
 
 @media (min-width: 64rem) {
   .cols-4 > * {
-    width: calc((100% - var(--grid-gap) - var(--grid-gap) - var(--grid-gap)) / 4);
+    width: calc((100% - var(--grid-gap) * 3) / 4);
   }
 }
 
-/* Horizontal Alignments */
-.center {
-  text-align: center;
+/* Grid columns */
+.grid-2,
+.grid-3,
+.grid-4 {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 40rem) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 48rem) {
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }

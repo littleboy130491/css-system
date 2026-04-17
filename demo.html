@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS System Demo</title>
+    <meta name="description" content="Demo page exercising typography, layout, and utility layers.">
+    <link rel="stylesheet" href="./styles/system.css">
+  </head>
+  <body>
+    <header>
+      <div class="container cluster">
+        <a class="eyebrow" href="#top">CSS System</a>
+        <nav class="cluster" aria-label="Primary">
+          <a href="#colors">Color</a>
+          <a href="#type-scale">Type</a>
+          <a href="#spacing">Spacing</a>
+          <a href="#radius">Radius</a>
+          <a href="#shadows">Shadow</a>
+          <a href="#typography">Typography</a>
+          <a href="#layout">Layout</a>
+          <a href="#utilities">Utilities</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section id="intro">
+        <div class="container stack">
+          <span class="eyebrow">Demo</span>
+          <h1>Fill the HTML, get a sensible page.</h1>
+          <p class="lead">
+            This page uses only semantic tags plus a few layout primitives.
+            No per-element classes are needed for typography to render well.
+          </p>
+        </div>
+      </section>
+
+      <section id="colors">
+        <div class="container stack">
+          <div class="section-heading">
+            <span class="subheading">Tokens</span>
+            <h2>Color</h2>
+            <p class="lead">Surface, text, border, and accent tokens.</p>
+          </div>
+
+          <div class="grid-4">
+            <div class="stack">
+              <div style="height: 96px; background: var(--color-bg); border-radius: var(--radius-sm); border: 1px solid var(--color-line);"></div>
+              <div>
+                <strong>--color-bg</strong>
+                <p class="text-muted"><code>#f5f2ea</code></p>
+              </div>
+            </div>
+            <div class="stack">
+              <div style="height: 96px; background: var(--color-surface); border-radius: var(--radius-sm); border: 1px solid var(--color-line);"></div>
+              <div>
+                <strong>--color-surface</strong>
+                <p class="text-muted"><code>#fffdf8</code></p>
+              </div>
+            </div>
+            <div class="stack">
+              <div style="height: 96px; background: var(--color-text); border-radius: var(--radius-sm);"></div>
+              <div>
+                <strong>--color-text</strong>
+                <p class="text-muted"><code>#221f1a</code></p>
+              </div>
+            </div>
+            <div class="stack">
+              <div style="height: 96px; background: var(--color-text-muted); border-radius: var(--radius-sm);"></div>
+              <div>
+                <strong>--color-text-muted</strong>
+                <p class="text-muted"><code>#6b645a</code></p>
+              </div>
+            </div>
+            <div class="stack">
+              <div style="height: 96px; background: var(--color-line); border-radius: var(--radius-sm);"></div>
+              <div>
+                <strong>--color-line</strong>
+                <p class="text-muted"><code>rgba(34,31,26,.12)</code></p>
+              </div>
+            </div>
+            <div class="stack">
+              <div style="height: 96px; background: var(--color-border-strong); border-radius: var(--radius-sm);"></div>
+              <div>
+                <strong>--color-border-strong</strong>
+                <p class="text-muted"><code>rgba(34,31,26,.24)</code></p>
+              </div>
+            </div>
+            <div class="stack">
+              <div style="height: 96px; background: var(--color-accent); border-radius: var(--radius-sm);"></div>
+              <div>
+                <strong>--color-accent</strong>
+                <p class="text-muted"><code>#bc5f3d</code></p>
+              </div>
+            </div>
+            <div class="stack">
+              <div style="height: 96px; background: var(--color-accent-strong); border-radius: var(--radius-sm);"></div>
+              <div>
+                <strong>--color-accent-strong</strong>
+                <p class="text-muted"><code>#9d4626</code></p>
+              </div>
+            </div>
+            <div class="stack">
+              <div style="height: 96px; background: var(--color-accent-soft); border-radius: var(--radius-sm); border: 1px solid var(--color-line);"></div>
+              <div>
+                <strong>--color-accent-soft</strong>
+                <p class="text-muted"><code>rgba(188,95,61,.12)</code></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="type-scale">
+        <div class="container stack">
+          <div class="section-heading">
+            <span class="subheading">Tokens</span>
+            <h2>Type scale</h2>
+            <p class="lead">Font sizes from <code>--text-xs</code> to <code>--text-4xl</code>.</p>
+          </div>
+
+          <div class="stack">
+            <div class="cluster" style="align-items: baseline; gap: var(--space-6);">
+              <code style="min-width: 9ch;">--text-xs</code>
+              <span style="font-size: var(--text-xs);">The quick brown fox jumps over the lazy dog</span>
+            </div>
+            <div class="cluster" style="align-items: baseline; gap: var(--space-6);">
+              <code style="min-width: 9ch;">--text-sm</code>
+              <span style="font-size: var(--text-sm);">The quick brown fox jumps over the lazy dog</span>
+            </div>
+            <div class="cluster" style="align-items: baseline; gap: var(--space-6);">
+              <code style="min-width: 9ch;">--text-base</code>
+              <span style="font-size: var(--text-base);">The quick brown fox jumps over the lazy dog</span>
+            </div>
+            <div class="cluster" style="align-items: baseline; gap: var(--space-6);">
+              <code style="min-width: 9ch;">--text-lg</code>
+              <span style="font-size: var(--text-lg);">The quick brown fox jumps over the lazy dog</span>
+            </div>
+            <div class="cluster" style="align-items: baseline; gap: var(--space-6);">
+              <code style="min-width: 9ch;">--text-xl</code>
+              <span style="font-size: var(--text-xl);">The quick brown fox</span>
+            </div>
+            <div class="cluster" style="align-items: baseline; gap: var(--space-6);">
+              <code style="min-width: 9ch;">--text-2xl</code>
+              <span style="font-size: var(--text-2xl);">The quick brown fox</span>
+            </div>
+            <div class="cluster" style="align-items: baseline; gap: var(--space-6);">
+              <code style="min-width: 9ch;">--text-3xl</code>
+              <span style="font-size: var(--text-3xl); line-height: 1.1;">The quick brown fox</span>
+            </div>
+            <div class="cluster" style="align-items: baseline; gap: var(--space-6);">
+              <code style="min-width: 9ch;">--text-4xl</code>
+              <span style="font-size: var(--text-4xl); line-height: 1.05;">Quick fox</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="spacing">
+        <div class="container stack">
+          <div class="section-heading">
+            <span class="subheading">Tokens</span>
+            <h2>Spacing</h2>
+            <p class="lead">Numeric scale used for gap, padding, and margin.</p>
+          </div>
+
+          <div class="stack">
+            <div class="cluster" style="gap: var(--space-4); align-items: center;">
+              <code style="min-width: 9ch;">--space-1</code>
+              <div style="width: var(--space-1); height: 24px; background: var(--color-accent);"></div>
+            </div>
+            <div class="cluster" style="gap: var(--space-4); align-items: center;">
+              <code style="min-width: 9ch;">--space-2</code>
+              <div style="width: var(--space-2); height: 24px; background: var(--color-accent);"></div>
+            </div>
+            <div class="cluster" style="gap: var(--space-4); align-items: center;">
+              <code style="min-width: 9ch;">--space-3</code>
+              <div style="width: var(--space-3); height: 24px; background: var(--color-accent);"></div>
+            </div>
+            <div class="cluster" style="gap: var(--space-4); align-items: center;">
+              <code style="min-width: 9ch;">--space-4</code>
+              <div style="width: var(--space-4); height: 24px; background: var(--color-accent);"></div>
+            </div>
+            <div class="cluster" style="gap: var(--space-4); align-items: center;">
+              <code style="min-width: 9ch;">--space-6</code>
+              <div style="width: var(--space-6); height: 24px; background: var(--color-accent);"></div>
+            </div>
+            <div class="cluster" style="gap: var(--space-4); align-items: center;">
+              <code style="min-width: 9ch;">--space-8</code>
+              <div style="width: var(--space-8); height: 24px; background: var(--color-accent);"></div>
+            </div>
+            <div class="cluster" style="gap: var(--space-4); align-items: center;">
+              <code style="min-width: 9ch;">--space-12</code>
+              <div style="width: var(--space-12); height: 24px; background: var(--color-accent);"></div>
+            </div>
+            <div class="cluster" style="gap: var(--space-4); align-items: center;">
+              <code style="min-width: 9ch;">--space-16</code>
+              <div style="width: var(--space-16); height: 24px; background: var(--color-accent);"></div>
+            </div>
+            <div class="cluster" style="gap: var(--space-4); align-items: center;">
+              <code style="min-width: 9ch;">--space-20</code>
+              <div style="width: var(--space-20); height: 24px; background: var(--color-accent);"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="radius">
+        <div class="container stack">
+          <div class="section-heading">
+            <span class="subheading">Tokens</span>
+            <h2>Radius</h2>
+            <p class="lead">Corner rounding primitives.</p>
+          </div>
+
+          <div class="grid-4">
+            <div class="stack">
+              <div style="height: 96px; background: var(--color-accent-soft); border-radius: var(--radius-sm);"></div>
+              <code>--radius-sm</code>
+            </div>
+            <div class="stack">
+              <div style="height: 96px; background: var(--color-accent-soft); border-radius: var(--radius-md);"></div>
+              <code>--radius-md</code>
+            </div>
+            <div class="stack">
+              <div style="height: 96px; background: var(--color-accent-soft); border-radius: var(--radius-lg);"></div>
+              <code>--radius-lg</code>
+            </div>
+            <div class="stack">
+              <div style="height: 96px; background: var(--color-accent-soft); border-radius: var(--radius-pill);"></div>
+              <code>--radius-pill</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="shadows">
+        <div class="container stack">
+          <div class="section-heading">
+            <span class="subheading">Tokens</span>
+            <h2>Shadow</h2>
+            <p class="lead">Elevation primitives.</p>
+          </div>
+
+          <div class="grid-3">
+            <div class="stack">
+              <div style="height: 120px; background: var(--color-surface); border-radius: var(--radius-md); box-shadow: var(--shadow-sm);"></div>
+              <code>--shadow-sm</code>
+            </div>
+            <div class="stack">
+              <div style="height: 120px; background: var(--color-surface); border-radius: var(--radius-md); box-shadow: var(--shadow-md);"></div>
+              <code>--shadow-md</code>
+            </div>
+            <div class="stack">
+              <div style="height: 120px; background: var(--color-surface); border-radius: var(--radius-md); box-shadow: var(--shadow-lg);"></div>
+              <code>--shadow-lg</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="typography">
+        <div class="container stack">
+          <div class="section-heading">
+            <span class="subheading">Typography</span>
+            <h2>Headings, text, and inline elements</h2>
+            <p class="lead">Unclassed tags are styled directly by <code>typography.css</code>.</p>
+          </div>
+
+          <h1>Heading one</h1>
+          <h2>Heading two</h2>
+          <h3>Heading three</h3>
+          <h4>Heading four</h4>
+          <h5>Heading five</h5>
+          <h6>Heading six</h6>
+
+          <p>
+            A paragraph of body copy with a <a href="#">linked phrase</a>,
+            <strong>strong emphasis</strong>, <em>emphasized text</em>, and
+            <small>small print</small>. Inline <code>code snippets</code> sit
+            comfortably inside a line.
+          </p>
+
+          <p class="text-muted">This paragraph opts into muted color.</p>
+
+          <hr>
+
+          <h3>Lists</h3>
+          <ul>
+            <li>Unordered list item</li>
+            <li>Second item with a <a href="#">link</a></li>
+            <li>Third item</li>
+          </ul>
+
+          <ol>
+            <li>Ordered list item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+          </ol>
+
+          <h3>Blockquote</h3>
+          <blockquote>
+            Good defaults mean less styling to write. Add character through
+            tokens, not through component overrides.
+          </blockquote>
+
+          <h3>Code block</h3>
+<pre><code>.container {
+  width: min(var(--container-width), calc(100% - var(--space-8)));
+  margin-inline: auto;
+}</code></pre>
+
+          <hr>
+
+          <h3>Labels and inline elements</h3>
+
+          <div class="stack">
+            <div class="cluster" style="align-items: baseline; gap: var(--space-6);">
+              <code style="min-width: 10ch;">.subheading</code>
+              <span class="subheading">Featured work</span>
+            </div>
+            <div class="cluster" style="align-items: baseline; gap: var(--space-6);">
+              <code style="min-width: 10ch;">.eyebrow</code>
+              <span class="eyebrow">Section label</span>
+            </div>
+            <div class="cluster" style="align-items: center; gap: var(--space-6);">
+              <code style="min-width: 10ch;">.badge</code>
+              <span class="badge">New</span>
+              <span class="badge">Beta</span>
+              <span class="badge">v2</span>
+            </div>
+            <div class="cluster" style="align-items: center; gap: var(--space-6);">
+              <code style="min-width: 10ch;">.button</code>
+              <a href="#" class="button">Primary action</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="layout">
+        <div class="container stack">
+          <div class="section-heading">
+            <span class="subheading">Layout</span>
+            <h2>Primitives for structure</h2>
+            <p class="lead">Containers, sections, stacks, clusters, and grid columns.</p>
+          </div>
+
+          <h3>Reference</h3>
+          <div class="u-surface" style="padding: var(--space-6); border-radius: var(--radius-md); border: 1px solid var(--color-line);">
+            <dl class="stack">
+              <div>
+                <dt><code>.container</code></dt>
+                <dd class="text-muted">Centered wrapper, max width <code>1200px</code> (<code>--container-width</code>).</dd>
+              </div>
+              <div>
+                <dt><code>.container-lg</code></dt>
+                <dd class="text-muted">Centered wrapper, max width <code>1400px</code> (<code>--wide-width</code>).</dd>
+              </div>
+              <div>
+                <dt><code>.section</code></dt>
+                <dd class="text-muted">Vertical padding using <code>--space-md</code> (<code>5rem</code>).</dd>
+              </div>
+              <div>
+                <dt><code>.section-tight</code></dt>
+                <dd class="text-muted">Smaller vertical padding using <code>--space-sm</code> (<code>2rem</code>).</dd>
+              </div>
+              <div>
+                <dt><code>.section-heading</code></dt>
+                <dd class="text-muted">Vertical cluster for eyebrow / title / lead, capped at <code>--content-width</code>.</dd>
+              </div>
+              <div>
+                <dt><code>.content-box</code></dt>
+                <dd class="text-muted">Wrapper with generous vertical padding (<code>--space-lg</code>) for standalone blocks.</dd>
+              </div>
+              <div>
+                <dt><code>.stack</code></dt>
+                <dd class="text-muted">Vertical flex column with <code>--space-4</code> gap.</dd>
+              </div>
+              <div>
+                <dt><code>.cluster</code></dt>
+                <dd class="text-muted">Horizontal flex row with wrap and <code>--space-4</code> gap.</dd>
+              </div>
+              <div>
+                <dt><code>.grid-2</code> / <code>.grid-3</code> / <code>.grid-4</code></dt>
+                <dd class="text-muted">Responsive CSS Grid that collapses to fewer columns on narrow screens.</dd>
+              </div>
+              <div>
+                <dt><code>.flex</code> + <code>.col</code></dt>
+                <dd class="text-muted">Flex row where each <code>.col</code> grows equally.</dd>
+              </div>
+              <div>
+                <dt><code>.flex-grid.cols-2/3/4</code></dt>
+                <dd class="text-muted">Flex-based responsive grid where children snap to fixed fractions at breakpoints.</dd>
+              </div>
+            </dl>
+          </div>
+
+          <h3>Stack</h3>
+          <p class="text-muted">Vertical rhythm via flexbox gap.</p>
+          <div class="u-surface" style="padding: var(--space-4); border-radius: var(--radius-md);">
+            <div class="stack">
+              <div style="background: var(--color-accent-soft); padding: var(--space-3); border-radius: var(--radius-sm);">Item 1</div>
+              <div style="background: var(--color-accent-soft); padding: var(--space-3); border-radius: var(--radius-sm);">Item 2</div>
+              <div style="background: var(--color-accent-soft); padding: var(--space-3); border-radius: var(--radius-sm);">Item 3</div>
+            </div>
+          </div>
+
+          <h3>Cluster</h3>
+          <p class="text-muted">Horizontal row with wrap; mixes nav, badges, and actions.</p>
+          <div class="u-surface" style="padding: var(--space-4); border-radius: var(--radius-md);">
+            <div class="cluster">
+              <a href="#">Link one</a>
+              <a href="#">Link two</a>
+              <a href="#">Link three</a>
+              <span class="badge">Tag</span>
+              <a href="#" class="button">Action</a>
+            </div>
+          </div>
+
+          <h3>Grid columns</h3>
+          <p class="text-muted">CSS Grid primitives. Collapse at <code>64rem</code>, <code>48rem</code>, and <code>40rem</code>.</p>
+
+          <h4><code>.grid-2</code></h4>
+          <div class="grid-2">
+            <div class="u-surface" style="padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">Column 1</div>
+            <div class="u-surface" style="padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">Column 2</div>
+          </div>
+
+          <h4><code>.grid-3</code></h4>
+          <div class="grid-3">
+            <div class="u-surface" style="padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">Column 1</div>
+            <div class="u-surface" style="padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">Column 2</div>
+            <div class="u-surface" style="padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">Column 3</div>
+          </div>
+
+          <h4><code>.grid-4</code></h4>
+          <div class="grid-4">
+            <div class="u-surface" style="padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">Column 1</div>
+            <div class="u-surface" style="padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">Column 2</div>
+            <div class="u-surface" style="padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">Column 3</div>
+            <div class="u-surface" style="padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">Column 4</div>
+          </div>
+
+          <h3>Flex columns</h3>
+          <p class="text-muted">Flex-based alternative using <code>.flex</code> with <code>.col</code> or <code>.cols-N</code>.</p>
+
+          <h4><code>.flex</code> + <code>.col</code> (equal grow)</h4>
+          <div class="flex">
+            <div class="col u-surface" style="padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">col</div>
+            <div class="col u-surface" style="padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">col</div>
+            <div class="col u-surface" style="padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">col</div>
+          </div>
+
+          <h4><code>.flex.flex-grid.cols-3</code></h4>
+          <div class="flex flex-grid cols-3">
+            <div class="u-surface" style="padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">Col 1</div>
+            <div class="u-surface" style="padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">Col 2</div>
+            <div class="u-surface" style="padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">Col 3</div>
+          </div>
+
+          <h3>Section heading</h3>
+          <p class="text-muted">Use above a content block. Caps at <code>--content-width</code>.</p>
+          <div class="u-surface" style="padding: var(--space-6); border-radius: var(--radius-md);">
+            <div class="section-heading">
+              <span class="eyebrow">Example</span>
+              <h4>Heading leads the section</h4>
+              <p class="lead">Lead copy sits directly under the title with matching rhythm.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="utilities" class="section-tight">
+        <div class="container stack">
+          <div class="section-heading">
+            <span class="subheading">Utilities</span>
+            <h2>Small helpers</h2>
+            <p class="lead">Text alignment, display, surface, and accessible labels.</p>
+          </div>
+
+          <p class="u-center">Centered text via <code>.u-center</code>.</p>
+          <p class="u-muted">Muted text via <code>.u-muted</code>.</p>
+
+          <div class="u-surface">
+            <p>Surface background via <code>.u-surface</code>.</p>
+          </div>
+
+          <p>
+            Visually hidden label follows (only exposed to assistive tech):
+            <span class="u-sr-only">Hidden accessible label</span>
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

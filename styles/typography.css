@@ -1,3 +1,4 @@
+/* Headings */
 h1 {
   font-size: var(--text-4xl);
   font-weight: var(--weight-bold);
@@ -5,7 +6,131 @@ h1 {
   letter-spacing: var(--tracking-tight);
 }
 
-p, a, li, caption {
+h2 {
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+h3 {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+}
+
+h4 {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+}
+
+h5 {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-normal);
+}
+
+h6 {
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-normal);
+}
+
+/* Body text */
+p {
+  line-height: var(--leading-relaxed);
+}
+
+small {
+  font-size: var(--text-sm);
+}
+
+strong {
+  font-weight: var(--weight-semibold);
+}
+
+em {
+  font-style: italic;
+}
+
+/* Links */
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+/* Lists */
+ul,
+ol {
+  padding-inline-start: var(--space-5);
+  line-height: var(--leading-relaxed);
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li + li {
+  margin-top: var(--space-1);
+}
+
+/* Blockquote */
+blockquote {
+  border-inline-start: var(--border-width-md) solid var(--color-border-strong);
+  padding-inline-start: var(--space-4);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Code */
+code,
+pre,
+kbd {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+}
+
+code {
+  background: var(--color-accent-soft);
+  padding: 0.125em 0.375em;
+  border-radius: var(--radius-sm);
+}
+
+pre {
+  background: var(--color-surface);
+  border: var(--border-width-sm) solid var(--color-line);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  line-height: var(--leading-snug);
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Horizontal rule */
+hr {
+  border: 0;
+  border-top: var(--border-width-sm) solid var(--color-line);
+}
+
+/* Text helpers */
+.lead {
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
   color: var(--color-text-muted);
 }
 
@@ -17,4 +142,14 @@ p, a, li, caption {
   color: var(--color-accent);
 }
 
-/* Add for table, accordion, tab, tooltip */
+.eyebrow {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
